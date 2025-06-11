@@ -2,16 +2,45 @@
 
 ## Getting Started
 
+# ZCalendar User Manual
+
+## Getting Started
+
 ### What is ZCalendar?
-ZCalendar is a comprehensive calendar application that helps you organize your schedule across multiple devices. With native apps for iOS and Android, you can access your calendar anywhere and stay synchronized across all your devices.
+ZCalendar is a **privacy-focused**, **offline-first** calendar application that works perfectly without an internet connection. You can optionally create an account to unlock cloud synchronization and premium features across multiple devices.
+
+### Usage Modes
+
+#### Guest Mode (Default)
+- **No account required**: Start using immediately after installation
+- **Complete privacy**: All data stays on your device
+- **Full offline functionality**: Create events, set reminders, manage multiple calendars
+- **Instant response**: All operations are immediate with no network delays
+
+#### Registered User Mode (Optional)
+- **Cloud synchronization**: Access your calendar from multiple devices
+- **Automatic backup**: Your data is safely stored in the cloud
+- **Premium features**: Sharing, collaboration, integrations, and analytics
+- **Seamless migration**: Keep all your guest mode data when you register
 
 ### Key Features
-- **Multi-view Calendar**: Day, week, month, and list views
-- **Event Management**: Create, edit, and delete events with ease
-- **Cross-device Sync**: Access your calendar on any device
-- **Smart Reminders**: Never miss an important event
-- **Multiple Calendars**: Organize events by category or purpose
-- **Sharing**: Share calendars with family, friends, or colleagues
+
+#### Available Offline (Guest Mode)
+- ✅ **Multi-view Calendar**: Day, week, month, and year views
+- ✅ **Event Management**: Create, edit, and delete events with ease
+- ✅ **Smart Reminders**: Local notifications for your events
+- ✅ **Multiple Calendars**: Organize events by category, color, and purpose
+- ✅ **Recurring Events**: Set up repeating events with flexible patterns
+- ✅ **Search**: Find events quickly with local search
+
+#### Premium Features (Registered Users Only)
+- 🔒 **Cross-device Sync**: Access your calendar on any device
+- 🔒 **Calendar Sharing**: Share calendars with family, friends, or colleagues
+- 🔒 **Event Collaboration**: Invite others to events and meetings
+- 🔒 **External Integrations**: Sync with Google Calendar, Outlook, and more
+- 🔒 **Cloud Backup**: Automatic backup and restore
+- 🔒 **Team Calendars**: Shared organizational calendars
+- 🔒 **Analytics**: Insights into your calendar usage and productivity
 
 ## Installation
 
@@ -29,20 +58,31 @@ ZCalendar is a comprehensive calendar application that helps you organize your s
 
 ## Account Setup
 
-### Creating an Account
-1. Open ZCalendar app
-2. Tap "Sign Up" on the welcome screen
-3. Enter your email address
-4. Create a secure password
-5. Enter your full name
-6. Tap "Create Account"
-7. Verify your email address when prompted
+### Guest Mode (Recommended for Privacy)
+1. **No setup required**: The app works immediately after installation
+2. **Start creating events**: Tap the "+" button to create your first event
+3. **Your data stays private**: Nothing is sent over the internet
+4. **Upgrade anytime**: You can create an account later to unlock premium features
 
-### Signing In
-1. Open ZCalendar app
-2. Tap "Sign In" on the welcome screen
-3. Enter your email and password
-4. Tap "Sign In"
+### Creating an Account (Optional)
+
+When you're ready to sync across devices or use premium features:
+
+1. **Open Account Settings**: Tap the settings icon in the app
+2. **Choose "Create Account"**: Select this option from the menu
+3. **Enter your details**:
+   - Email address
+   - Secure password
+   - Display name
+4. **Data Migration**: The app will automatically upload all your existing events and calendars
+5. **Confirmation**: You'll receive a confirmation email
+6. **Start syncing**: Your data is now available across all your devices
+
+### Signing In (Existing Users)
+1. **Open the app** on a new device
+2. **Tap "Sign In"** instead of using as guest
+3. **Enter credentials**: Your registered email and password
+4. **Download your data**: All your calendars and events will sync to the new device
 
 ## Basic Usage
 
