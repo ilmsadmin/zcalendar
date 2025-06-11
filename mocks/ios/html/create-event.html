@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZCalendar - Create Event (iOS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ios-device">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">20:41</span>
+            <div class="status-icons">
+                <span class="signal">📶</span>
+                <span class="wifi">📶</span>
+                <span class="battery">🔋100%</span>
+                <span class="date">Wed Dec 14</span>
+            </div>
+        </div>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <button class="cancel-btn">Cancel</button>
+            <h1 class="modal-title">New Event</h1>
+            <button class="save-btn">Add</button>
+        </div>
+
+        <!-- Event Form -->
+        <div class="event-form">
+            <!-- Event Title -->
+            <div class="form-section">
+                <div class="form-row">
+                    <input type="text" class="event-title-input" placeholder="Event title" value="Team Meeting">
+                </div>
+            </div>
+
+            <!-- Date and Time -->
+            <div class="form-section">
+                <div class="form-row">
+                    <span class="form-label">Starts</span>
+                    <div class="form-values">
+                        <span class="form-value">Thu, Dec 14, 2023</span>
+                        <span class="form-value">9:00 AM</span>
+                    </div>
+                    <span class="chevron">></span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">Ends</span>
+                    <div class="form-values">
+                        <span class="form-value">Thu, Dec 14, 2023</span>
+                        <span class="form-value">10:00 AM</span>
+                    </div>
+                    <span class="chevron">></span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">All Day</span>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="all-day" class="toggle-input">
+                        <label for="all-day" class="toggle-label"></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="form-section">
+                <div class="form-row">
+                    <span class="form-label">Location</span>
+                    <input type="text" class="form-input" placeholder="Add location" value="Conference Room A">
+                </div>
+            </div>
+
+            <!-- Calendar -->
+            <div class="form-section">
+                <div class="form-row">
+                    <span class="form-label">Calendar</span>
+                    <div class="calendar-selector">
+                        <div class="calendar-color personal"></div>
+                        <span class="form-value">Personal</span>
+                    </div>
+                    <span class="chevron">></span>
+                </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="form-section">
+                <div class="form-row notes-row">
+                    <span class="form-label">Notes</span>
+                    <textarea class="notes-input" placeholder="Add notes">Discuss Q4 goals and planning for next quarter. Review budget proposals and team assignments.</textarea>
+                </div>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="form-section">
+                <div class="form-row">
+                    <span class="form-label">⚠️ Reminder</span>
+                    <span class="form-value">15 min before</span>
+                    <span class="chevron">></span>
+                </div>
+                <div class="form-row">
+                    <span class="form-label">🔁 Repeat</span>
+                    <span class="form-value">Never</span>
+                    <span class="chevron">></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Indicator -->
+        <div class="home-indicator"></div>
+    </div>
+</body>
+</html>
