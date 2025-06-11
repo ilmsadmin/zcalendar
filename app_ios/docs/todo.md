@@ -40,58 +40,77 @@
   - [ ] Implement User model cho authentication
   - [ ] Tạo các supporting models (EventCategory, Reminder, etc.)
 
-### 🎨 Giai đoạn 3: UI/UX Implementation (User Interface)
+### 📊 Giai đoạn 3: Mock Data và Test Data Setup (Mock Data Creation)
+- [ ] **Mock Data Models**
+  - [ ] Tạo MockDataService cho việc generate test data
+  - [ ] Implement mock events với various types (meetings, appointments, reminders)
+  - [ ] Tạo mock calendars với different colors và categories
+  - [ ] Generate mock user profiles và preferences
+
+- [ ] **Sample Data Generation**
+  - [ ] Tạo sample events cho current month và các tháng tiếp theo
+  - [ ] Add recurring events samples (daily, weekly, monthly, yearly)
+  - [ ] Implement holiday events và special occasions
+  - [ ] Tạo realistic event data với Vietnamese context
+
+- [ ] **Mock Service Layer**
+  - [ ] Implement MockEventService thay thế cho real API calls
+  - [ ] Add delay simulation cho realistic loading states
+  - [ ] Implement CRUD operations với in-memory storage
+  - [ ] Add error simulation cho testing error states
+
+### 🎨 Giai đoạn 4: UI/UX Implementation với Mock Data (User Interface)
 - [ ] **App Structure và Navigation**
   - [ ] Thiết lập main ContentView và navigation structure
-  - [ ] Implement TabView cho main app navigation
+  - [ ] Implement TabView cho main app navigation với mock data
   - [ ] Tạo các base UI components và reusable views
   - [ ] Thiết lập app theming và color schemes
 
-- [ ] **Calendar Views**
-  - [ ] Implement CalendarView (month view) với SwiftUI
-  - [ ] Tạo DayView cho hiển thị chi tiết ngày
-  - [ ] Implement WeekView cho xem theo tuần
-  - [ ] Tạo YearView cho overview năm
+- [ ] **Calendar Views với Mock Data**
+  - [ ] Implement CalendarView (month view) hiển thị mock events
+  - [ ] Tạo DayView cho hiển thị chi tiết ngày với sample events
+  - [ ] Implement WeekView cho xem theo tuần với mock data
+  - [ ] Tạo YearView cho overview năm với mock events
   - [ ] Add gesture handlers cho navigation giữa các views
 
-- [ ] **Event Management Views**
-  - [ ] Implement EventListView để hiển thị danh sách events
-  - [ ] Tạo EventDetailView cho hiển thị chi tiết event
-  - [ ] Implement EventEditView cho tạo/chỉnh sửa events
-  - [ ] Add validation và error handling cho forms
+- [ ] **Event Management Views với Mock Data**
+  - [ ] Implement EventListView hiển thị mock events
+  - [ ] Tạo EventDetailView cho hiển thị chi tiết mock events
+  - [ ] Implement EventEditView cho tạo/chỉnh sửa với mock data
+  - [ ] Add validation và error handling cho forms với mock responses
 
 - [ ] **Settings và Configuration**
   - [ ] Implement SettingsView cho app preferences
-  - [ ] Tạo calendar preferences và customization options
-  - [ ] Add notification settings UI
+  - [ ] Tạo calendar preferences với mock calendars
+  - [ ] Add notification settings UI với mock data
   - [ ] Implement theme và appearance settings
 
-### ⚡ Giai đoạn 4: Core Functionality (Business Logic)
-- [ ] **Event Management (CRUD Operations)**
-  - [ ] Implement tạo mới events với validation
-  - [ ] Add chức năng edit và update events
-  - [ ] Implement delete events với confirmation
-  - [ ] Add support cho recurring events
+### ⚡ Giai đoạn 5: Core Functionality với Mock Data (Business Logic)
+- [ ] **Event Management (CRUD Operations) với Mock Data**
+  - [ ] Implement tạo mới events với mock storage
+  - [ ] Add chức năng edit và update events trong mock service
+  - [ ] Implement delete events với confirmation sử dụng mock data
+  - [ ] Add support cho recurring events với mock examples
 
-- [ ] **Calendar Features**
-  - [ ] Implement multiple calendar support
-  - [ ] Add calendar color customization
-  - [ ] Implement calendar sharing functionality
-  - [ ] Add import/export calendar features
+- [ ] **Calendar Features với Mock Data**
+  - [ ] Implement multiple calendar support với mock calendars
+  - [ ] Add calendar color customization với mock data
+  - [ ] Implement calendar sharing functionality (UI only với mock)
+  - [ ] Add import/export calendar features với mock data
 
-- [ ] **Notifications và Reminders**
-  - [ ] Implement local notifications cho events
-  - [ ] Add reminder scheduling và management
+- [ ] **Notifications và Reminders với Mock Data**
+  - [ ] Implement local notifications cho mock events
+  - [ ] Add reminder scheduling với mock events
   - [ ] Tạo notification permission handling
-  - [ ] Implement custom reminder types
+  - [ ] Implement custom reminder types với mock data
 
-- [ ] **Search và Filtering**
-  - [ ] Add search functionality cho events
-  - [ ] Implement filtering theo date range, category
-  - [ ] Add sorting options cho event lists
-  - [ ] Implement smart suggestions
+- [ ] **Search và Filtering với Mock Data**
+  - [ ] Add search functionality cho mock events
+  - [ ] Implement filtering theo date range, category với mock data
+  - [ ] Add sorting options cho mock event lists
+  - [ ] Implement smart suggestions với mock data
 
-### 🔗 Giai đoạn 5: API Integration và Sync (Networking)
+### 🔗 Giai đoạn 6: API Integration và Real Data Connection (Networking)
 - [ ] **API Service Layer**
   - [ ] Implement APIService với URLSession và async/await
   - [ ] Add authentication handling với JWT tokens
@@ -110,7 +129,13 @@
   - [ ] Implement guest mode functionality
   - [ ] Add account migration từ offline sang online
 
-### 🧪 Giai đoạn 6: Testing và Quality Assurance (Testing)
+- [ ] **Migration từ Mock Data sang Real API**
+  - [ ] Replace MockEventService với real APIService
+  - [ ] Implement data migration từ mock sang real database
+  - [ ] Add loading states và error handling cho real API calls
+  - [ ] Test sync functionality với real backend
+
+### 🧪 Giai đoạn 7: Testing và Quality Assurance (Testing)
 - [ ] **Unit Testing**
   - [ ] Viết unit tests cho ViewModels
   - [ ] Test Core Data operations
@@ -129,7 +154,7 @@
   - [ ] Integration tests với backend API
   - [ ] Performance testing và memory profiling
 
-### 🚀 Giai đoạn 7: Advanced Features (Enhanced Functionality)
+### 🚀 Giai đoạn 8: Advanced Features (Enhanced Functionality)
 - [ ] **iOS-Specific Features**
   - [ ] Implement Today Widget cho home screen
   - [ ] Add Siri Shortcuts integration
@@ -148,7 +173,7 @@
   - [ ] Ensure proper contrast ratios
   - [ ] Test với accessibility tools
 
-### 📦 Giai đoạn 8: Deployment Preparation (Distribution)
+### 📦 Giai đoạn 9: Deployment Preparation (Distribution)
 - [ ] **App Store Preparation**
   - [ ] Tạo App Store metadata và descriptions
   - [ ] Design app icon và screenshots
@@ -185,26 +210,28 @@
 ## 📊 Tracking Progress
 
 ### Current Status: 🟡 Planning Phase
-- **Completed**: 0/8 phases
+- **Completed**: 0/9 phases
 - **In Progress**: Giai đoạn 1 (Project Setup)
-- **Next Priority**: Thiết lập Xcode project và dependencies
+- **Next Priority**: Thiết lập Xcode project và dependencies, sau đó tạo mock data
 
 ### Milestones
-- **Milestone 1**: Basic app structure và navigation (Week 2)
-- **Milestone 2**: Core calendar functionality (Week 4)
-- **Milestone 3**: API integration và sync (Week 6)
-- **Milestone 4**: Beta release ready (Week 8)
+- **Milestone 1**: Basic app structure và mock data setup (Week 2)
+- **Milestone 2**: UI implementation hoàn chỉnh với mock data (Week 4)
+- **Milestone 3**: Core functionality với mock data (Week 6)
+- **Milestone 4**: API integration và real data connection (Week 8)
+- **Milestone 5**: Beta release ready (Week 10)
 
 ### Team Assignments
-- **UI/UX Developer**: Giai đoạn 3 (UI Implementation)
-- **iOS Developer**: Giai đoạn 2, 4, 5 (Architecture, Core, API)
-- **QA Engineer**: Giai đoạn 6 (Testing)
-- **DevOps Engineer**: Giai đoạn 8 (Deployment)
+- **UI/UX Developer**: Giai đoạn 3, 4 (Mock Data Setup, UI Implementation)
+- **iOS Developer**: Giai đoạn 2, 5, 6 (Architecture, Core Logic, API Integration)
+- **QA Engineer**: Giai đoạn 7 (Testing)
+- **DevOps Engineer**: Giai đoạn 9 (Deployment)
 
 ### Dependencies
-- Backend API completion (cho sync features)
+- Mock data creation (cho UI development phase)
 - Design system finalization (cho UI implementation)
-- Authentication service setup (cho user features)
+- Backend API completion (cho real data integration phase)
+- Authentication service setup (cho final integration)
 
 ---
 

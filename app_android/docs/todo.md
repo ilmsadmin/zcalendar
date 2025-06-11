@@ -46,63 +46,82 @@
   - [ ] Add network error handling và interceptors
   - [ ] Configure SSL pinning và security
 
-### 🎨 Giai đoạn 3: UI/UX Implementation (User Interface)
+### 📊 Giai đoạn 3: Mock Data và Test Data Setup (Mock Data Creation)
+- [ ] **Mock Data Models**
+  - [ ] Tạo MockDataService cho việc generate test data
+  - [ ] Implement mock events với various types (meetings, appointments, reminders)
+  - [ ] Tạo mock calendars với different colors và categories
+  - [ ] Generate mock user profiles và preferences
+
+- [ ] **Sample Data Generation** 
+  - [ ] Tạo sample events cho current month và các tháng tiếp theo
+  - [ ] Add recurring events samples (daily, weekly, monthly, yearly)
+  - [ ] Implement holiday events và special occasions
+  - [ ] Tạo realistic event data với Vietnamese context
+
+- [ ] **Mock Repository Layer**
+  - [ ] Implement MockEventRepository thay thế cho real API calls
+  - [ ] Add delay simulation cho realistic loading states
+  - [ ] Implement CRUD operations với in-memory storage
+  - [ ] Add error simulation cho testing error states
+
+### 🎨 Giai đoạn 4: UI/UX Implementation với Mock Data (User Interface)
 - [ ] **Jetpack Compose Foundation**
   - [ ] Setup Compose theme với Material Design 3
   - [ ] Implement design system (colors, typography, shapes)
   - [ ] Tạo reusable composables và components
   - [ ] Setup navigation với Compose Navigation
 
-- [ ] **Main App Structure**
+- [ ] **Main App Structure với Mock Data**
   - [ ] Implement MainActivity và main navigation
-  - [ ] Setup bottom navigation hoặc navigation drawer
+  - [ ] Setup bottom navigation với mock data integration
   - [ ] Add splash screen và onboarding flows
   - [ ] Implement responsive design cho tablets
 
-- [ ] **Calendar UI Components**
-  - [ ] Implement MonthView composable với custom calendar grid
-  - [ ] Tạo WeekView và DayView layouts
-  - [ ] Add calendar navigation controls
+- [ ] **Calendar UI Components với Mock Data**
+  - [ ] Implement MonthView composable hiển thị mock events
+  - [ ] Tạo WeekView và DayView layouts với sample data
+  - [ ] Add calendar navigation controls với mock data
   - [ ] Implement date picker và time picker components
 
-- [ ] **Event Management UI**
-  - [ ] Tạo EventList composable với LazyColumn
-  - [ ] Implement EventDetail screen với full event info
-  - [ ] Add EventEdit/Create forms với validation
-  - [ ] Implement event categories và color coding
+- [ ] **Event Management UI với Mock Data**
+  - [ ] Tạo EventList composable hiển thị mock events với LazyColumn
+  - [ ] Implement EventDetail screen với mock event info
+  - [ ] Add EventEdit/Create forms với mock data validation
+  - [ ] Implement event categories và color coding với mock data
 
 - [ ] **Settings và Preferences**
   - [ ] Implement Settings screen với PreferencesDataStore
   - [ ] Add theme selection (Light/Dark/System)
-  - [ ] Tạo notification preferences UI
-  - [ ] Add calendar sync settings
+  - [ ] Tạo notification preferences UI với mock settings
+  - [ ] Add calendar sync settings (UI only với mock data)
 
-### ⚡ Giai đoạn 4: Core Functionality (Business Logic)
-- [ ] **Event Management Features**
-  - [ ] Implement CRUD operations cho events
-  - [ ] Add recurring events support với complex patterns
-  - [ ] Implement event categories và tags
-  - [ ] Add event attachments và notes functionality
+### ⚡ Giai đoạn 5: Core Functionality với Mock Data (Business Logic)
+- [ ] **Event Management Features với Mock Data**
+  - [ ] Implement CRUD operations cho mock events
+  - [ ] Add recurring events support với mock patterns
+  - [ ] Implement event categories và tags với mock data
+  - [ ] Add event attachments và notes functionality với mock storage
 
-- [ ] **Calendar Features**
-  - [ ] Multi-calendar support với color coding
-  - [ ] Calendar sharing và permissions
-  - [ ] Import/export functionality (iCal, CSV)
-  - [ ] Calendar widgets và shortcuts
+- [ ] **Calendar Features với Mock Data**
+  - [ ] Multi-calendar support với mock calendars và color coding
+  - [ ] Calendar sharing và permissions (UI only với mock data)
+  - [ ] Import/export functionality với mock data (iCal, CSV)
+  - [ ] Calendar widgets và shortcuts với mock events
 
-- [ ] **Search và Filtering**
-  - [ ] Implement full-text search cho events
-  - [ ] Add advanced filtering (date, category, calendar)
-  - [ ] Implement sorting options và preferences
-  - [ ] Add recent searches và suggestions
+- [ ] **Search và Filtering với Mock Data**
+  - [ ] Implement full-text search cho mock events
+  - [ ] Add advanced filtering với mock data (date, category, calendar)
+  - [ ] Implement sorting options và preferences với mock data
+  - [ ] Add recent searches và suggestions với mock data
 
-- [ ] **Notifications và Reminders**
+- [ ] **Notifications và Reminders với Mock Data**
   - [ ] Setup WorkManager cho background tasks
-  - [ ] Implement local notifications cho event reminders
+  - [ ] Implement local notifications cho mock event reminders
   - [ ] Add notification channels và customization
-  - [ ] Implement smart notification scheduling
+  - [ ] Implement smart notification scheduling với mock events
 
-### 🔗 Giai đoạn 5: API Integration và Sync (Networking & Sync)
+### 🔗 Giai đoạn 6: API Integration và Real Data Connection (Networking & Sync)
 - [ ] **API Client Implementation**
   - [ ] Implement REST API client với Retrofit
   - [ ] Add authentication handling (JWT tokens)
@@ -127,7 +146,13 @@
   - [ ] Implement sync queue cho offline actions
   - [ ] Add data caching strategies
 
-### 🧪 Giai đoạn 6: Testing và Quality Assurance (Testing)
+- [ ] **Migration từ Mock Data sang Real API**
+  - [ ] Replace MockEventRepository với real Repository implementations
+  - [ ] Implement data migration từ mock sang real database
+  - [ ] Add loading states và error handling cho real API calls
+  - [ ] Test sync functionality với real backend
+
+### 🧪 Giai đoạn 7: Testing và Quality Assurance (Testing)
 - [ ] **Unit Testing**
   - [ ] Test ViewModels với MockK
   - [ ] Test Repository implementations
@@ -152,7 +177,7 @@
   - [ ] Analyze database query performance
   - [ ] Test với large datasets
 
-### 🚀 Giai đoạn 7: Advanced Features (Enhanced Functionality)
+### 🚀 Giai đoạn 8: Advanced Features (Enhanced Functionality)
 - [ ] **Android-Specific Features**
   - [ ] Implement home screen widgets
   - [ ] Add Quick Settings tiles
@@ -177,7 +202,7 @@
   - [ ] Test với accessibility scanner
   - [ ] Support high contrast themes
 
-### 📦 Giai đoạn 8: Deployment Preparation (Distribution)
+### 📦 Giai đoạn 9: Deployment Preparation (Distribution)
 - [ ] **Play Store Preparation**
   - [ ] Create Play Store listing với metadata
   - [ ] Design promotional graphics và screenshots
@@ -226,27 +251,28 @@
 ## 📊 Tracking Progress
 
 ### Current Status: 🟡 Planning Phase
-- **Completed**: 0/8 phases
+- **Completed**: 0/9 phases
 - **In Progress**: Giai đoạn 1 (Project Setup)
-- **Next Priority**: Thiết lập Android Studio project và dependencies
+- **Next Priority**: Thiết lập Android Studio project và dependencies, sau đó tạo mock data
 
 ### Milestones
-- **Milestone 1**: Basic app structure và navigation (Week 2)
-- **Milestone 2**: Core calendar UI implementation (Week 4)
-- **Milestone 3**: Event management functionality (Week 6)
-- **Milestone 4**: API integration và sync (Week 8)
+- **Milestone 1**: Basic app structure và mock data setup (Week 2)
+- **Milestone 2**: Core calendar UI implementation với mock data (Week 4)
+- **Milestone 3**: Event management functionality với mock data (Week 6)
+- **Milestone 4**: API integration và real data connection (Week 8)
 - **Milestone 5**: Beta release preparation (Week 10)
 
 ### Team Assignments
 - **Android Developer (Lead)**: Architecture, Core functionality, API integration
-- **UI/UX Developer**: Jetpack Compose implementation, Material Design
-- **QA Engineer**: Testing strategies và automation
-- **DevOps Engineer**: CI/CD pipeline và deployment
+- **UI/UX Developer**: Giai đoạn 3, 4 (Mock Data Setup, Jetpack Compose implementation)
+- **QA Engineer**: Giai đoạn 7 (Testing strategies và automation)
+- **DevOps Engineer**: Giai đoạn 9 (CI/CD pipeline và deployment)
 
 ### Dependencies
-- **Backend API**: Cần hoàn thành cho sync features
-- **Design System**: Cần finalize cho UI implementation
-- **Authentication Service**: Cần setup cho user management
+- **Mock Data Creation**: Cần hoàn thành trước UI development
+- **Design System**: Cần finalize cho UI implementation với mock data
+- **Backend API**: Cần hoàn thành cho real data integration phase
+- **Authentication Service**: Cần setup cho final integration
 
 ### Technical Considerations
 - **Minimum SDK**: API 24 (Android 7.0) - covers 95%+ devices
