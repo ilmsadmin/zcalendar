@@ -1,0 +1,459 @@
+/* Android ZCalendar Styles */
+/* Based on Material Design 3 Guidelines */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', system-ui, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.android-device {
+    width: 360px;
+    height: 800px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Status Bar */
+.status-bar {
+    height: 32px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.status-left {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.time {
+    font-weight: 500;
+}
+
+/* Top App Bar */
+.top-app-bar {
+    height: 64px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    elevation: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.nav-button, .action-button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    color: #1f1f1f;
+}
+
+.nav-button:hover, .action-button:hover {
+    background-color: #f3f3f3;
+}
+
+.app-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1f1f1f;
+}
+
+.app-actions {
+    display: flex;
+    gap: 4px;
+}
+
+/* Month Navigation */
+.month-nav {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #ffffff;
+}
+
+.month-nav-btn {
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #6750a4;
+    font-weight: 500;
+}
+
+.month-nav-btn:hover {
+    background-color: #f3f3f3;
+}
+
+.month-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1f1f1f;
+}
+
+/* Week Header */
+.week-header {
+    height: 32px;
+    display: flex;
+    background-color: #f7f2fa;
+    border-bottom: 1px solid #e7e0ec;
+}
+
+.day-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #49454f;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    flex: 1;
+    background-color: #ffffff;
+}
+
+.calendar-week {
+    display: flex;
+    height: 48px;
+    border-bottom: 1px solid #e7e0ec;
+}
+
+.calendar-day {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #1f1f1f;
+    cursor: pointer;
+    position: relative;
+    border-right: 1px solid #e7e0ec;
+    font-weight: 400;
+}
+
+.calendar-day:last-child {
+    border-right: none;
+}
+
+.calendar-day:hover {
+    background-color: #f7f2fa;
+}
+
+.calendar-day.today {
+    background-color: #6750a4;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+.calendar-day.has-event {
+    position: relative;
+}
+
+.event-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: #6750a4;
+    border-radius: 50%;
+}
+
+.today .event-indicator {
+    background-color: #ffffff;
+}
+
+/* Events Section */
+.events-section {
+    background-color: #ffffff;
+    padding: 16px;
+    border-top: 1px solid #e7e0ec;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f1f1f;
+    margin-bottom: 12px;
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin-bottom: 8px;
+    background-color: #f7f2fa;
+    border-radius: 12px;
+    overflow: hidden;
+    elevation: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.event-border {
+    width: 4px;
+    height: 100%;
+    background-color: #6750a4;
+}
+
+.event-content {
+    flex: 1;
+    padding: 12px 16px;
+}
+
+.event-time {
+    font-size: 12px;
+    color: #49454f;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.event-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f1f1f;
+    margin-bottom: 4px;
+}
+
+.event-location {
+    font-size: 12px;
+    color: #49454f;
+    font-weight: 400;
+}
+
+.event-reminder {
+    padding: 16px;
+    font-size: 16px;
+}
+
+/* FAB (Floating Action Button) */
+.fab {
+    position: absolute;
+    bottom: 96px;
+    right: 16px;
+    z-index: 1000;
+}
+
+.fab-button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    background-color: #6750a4;
+    color: #ffffff;
+    border-radius: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    elevation: 3;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.fab-button:hover {
+    background-color: #7965af;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    height: 80px;
+    background-color: #ffffff;
+    border-top: 1px solid #e7e0ec;
+    display: flex;
+    elevation: 2;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+    color: #49454f;
+}
+
+.nav-label {
+    font-size: 12px;
+    color: #49454f;
+    font-weight: 500;
+}
+
+.nav-item.active .nav-icon,
+.nav-item.active .nav-label {
+    color: #6750a4;
+}
+
+.nav-item:hover {
+    background-color: #f7f2fa;
+}
+
+/* Navigation Bar (Android gesture bar) */
+.nav-bar {
+    height: 24px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-indicator {
+    width: 36px;
+    height: 3px;
+    background-color: #1f1f1f;
+    border-radius: 2px;
+}
+
+/* Material Form Components */
+.material-input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.material-input:focus {
+    border-color: #6750a4;
+    border-width: 2px;
+}
+
+.material-button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.material-button.filled {
+    background-color: #6750a4;
+    color: #ffffff;
+}
+
+.material-button.outlined {
+    background-color: transparent;
+    color: #6750a4;
+    border: 1px solid #6750a4;
+}
+
+.material-button:hover {
+    elevation: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+    .android-device {
+        background-color: #1f1f1f;
+    }
+    
+    .status-bar,
+    .top-app-bar,
+    .month-nav,
+    .calendar-grid,
+    .events-section,
+    .bottom-nav,
+    .nav-bar {
+        background-color: #1f1f1f;
+        color: #e6e1e5;
+    }
+    
+    .app-title,
+    .month-title,
+    .section-title,
+    .event-title,
+    .calendar-day {
+        color: #e6e1e5;
+    }
+    
+    .week-header {
+        background-color: #2b2930;
+    }
+    
+    .event-card {
+        background-color: #2b2930;
+    }
+    
+    .nav-button:hover,
+    .action-button:hover,
+    .month-nav-btn:hover,
+    .calendar-day:hover,
+    .nav-item:hover {
+        background-color: #2b2930;
+    }
+    
+    .top-app-bar,
+    .week-header,
+    .events-section,
+    .bottom-nav,
+    .calendar-week {
+        border-color: #49454f;
+    }
+    
+    .nav-indicator {
+        background-color: #e6e1e5;
+    }
+    
+    .nav-icon,
+    .nav-label {
+        color: #cac4d0;
+    }
+    
+    .nav-item.active .nav-icon,
+    .nav-item.active .nav-label {
+        color: #d0bcff;
+    }
+}

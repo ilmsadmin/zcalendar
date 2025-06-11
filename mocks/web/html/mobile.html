@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZCalendar - Mobile Web</title>
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <div class="mobile-app">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-btn">☰</button>
+            <h1 class="title">Calendar</h1>
+            <button class="search-btn">🔍</button>
+        </header>
+
+        <!-- Month Navigation -->
+        <div class="month-nav">
+            <button class="nav-btn">←</button>
+            <h2 class="month-title">December 2023</h2>
+            <button class="nav-btn">→</button>
+        </div>
+
+        <!-- View Controls -->
+        <div class="view-controls">
+            <button class="view-btn">Day</button>
+            <button class="view-btn">Week</button>
+            <button class="view-btn active">Month</button>
+            <button class="view-btn">List</button>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar-container">
+            <!-- Week Header -->
+            <div class="week-header">
+                <div class="day-label">S</div>
+                <div class="day-label">M</div>
+                <div class="day-label">T</div>
+                <div class="day-label">W</div>
+                <div class="day-label">T</div>
+                <div class="day-label">F</div>
+                <div class="day-label">S</div>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="calendar-grid">
+                <!-- Week 1 -->
+                <div class="calendar-week">
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                </div>
+                <!-- Week 2 -->
+                <div class="calendar-week">
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                </div>
+                <!-- Week 3 -->
+                <div class="calendar-week">
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day today">
+                        <span class="date-number">14</span>
+                        <div class="event-dot personal"></div>
+                        <div class="event-dot work"></div>
+                    </div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                </div>
+                <!-- Week 4 -->
+                <div class="calendar-week">
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">
+                        <span class="date-number">21</span>
+                        <div class="event-dot personal"></div>
+                    </div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                </div>
+                <!-- Week 5 -->
+                <div class="calendar-week">
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day holiday">
+                        <span class="date-number">25</span>
+                        <div class="event-dot holiday"></div>
+                    </div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                </div>
+                <!-- Week 6 -->
+                <div class="calendar-week">
+                    <div class="calendar-day">
+                        <span class="date-number">31</span>
+                        <div class="event-dot personal"></div>
+                    </div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                    <div class="calendar-day other-month"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Today's Events -->
+        <div class="today-section">
+            <h3 class="section-title">Today - December 14</h3>
+            <div class="event-list">
+                <div class="event-item">
+                    <div class="event-color personal"></div>
+                    <div class="event-content">
+                        <div class="event-time">9:00 AM - 10:00 AM</div>
+                        <div class="event-title">Team Meeting</div>
+                        <div class="event-location">📍 Conference Room A</div>
+                    </div>
+                    <button class="event-more">⋮</button>
+                </div>
+                <div class="event-item">
+                    <div class="event-color work"></div>
+                    <div class="event-content">
+                        <div class="event-time">2:00 PM - 3:00 PM</div>
+                        <div class="event-title">Client Presentation</div>
+                        <div class="event-location">📞 Video Call</div>
+                    </div>
+                    <button class="event-more">⋮</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAB -->
+        <button class="fab">+</button>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <div class="nav-icon">📅</div>
+                <div class="nav-label">Calendar</div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon">📋</div>
+                <div class="nav-label">Events</div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon">👥</div>
+                <div class="nav-label">Shared</div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon">⚙️</div>
+                <div class="nav-label">Settings</div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
