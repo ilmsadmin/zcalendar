@@ -24,6 +24,7 @@ import {
   CheckCircle2,
   StickyNote,
 } from "lucide-react";
+import { TaskItem, QuickAddTask, QuickAddNote } from "@/components/calendar/quick-add-panels";
 
 function parseDate(dateStr: string) {
   const [y, m, d] = dateStr.split("-").map(Number);
@@ -343,53 +344,32 @@ export default function DayDetailPage({
         <div className="space-y-3">
           {/* Tasks */}
           <div className="rounded-2xl bg-card border p-3">
-            <div className="flex items-center gap-1.5 mb-2">
-              <CheckCircle2 className="h-3.5 w-3.5 text-blue-500" />
-              <span className="text-xs font-semibold">Task ({tasks?.length ?? 0})</span>
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-blue-500" />
+                <span className="text-xs font-semibold">Task ({tasks?.length ?? 0})</span>
+              </div>
             </div>
             <div className="space-y-1.5">
               {tasks && tasks.length > 0 ? (
                 tasks.map((t) => (
-                  <div
-                    key={t.id}
-                    className={cn(
-                      "flex items-center gap-2 rounded-xl px-2.5 py-2 text-xs",
-                      t.status === "done"
-                        ? "bg-green-50 dark:bg-green-950/20 line-through text-muted-foreground"
-                        : t.priority === "urgent" || t.priority === "high"
-                        ? "bg-red-50 dark:bg-red-950/20"
-                        : "bg-blue-50 dark:bg-blue-950/20"
-                    )}
-                  >
-                    <span className={cn(
-                      "h-2 w-2 rounded-full shrink-0",
-                      t.status === "done" ? "bg-green-500"
-                        : t.priority === "urgent" ? "bg-red-500"
-                        : t.priority === "high" ? "bg-orange-500"
-                        : "bg-blue-500"
-                    )} />
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{t.title}</p>
-                      {t.description && (
-                        <p className="text-[10px] text-muted-foreground line-clamp-1">{t.description}</p>
-                      )}
-                    </div>
-                    <Badge variant="outline" className="text-[9px] shrink-0 h-4">
-                      {t.status === "done" ? "Xong" : t.status === "in_progress" ? "Đang làm" : "Chờ"}
-                    </Badge>
-                  </div>
+                  <TaskItem key={t.id} task={t} />
                 ))
               ) : (
-                <p className="text-xs text-muted-foreground py-3 text-center">Không có task nào</p>
+                <p className="text-xs text-muted-foreground py-2 text-center">Không có task nào</p>
               )}
             </div>
+            {/* Quick add task */}
+            <QuickAddTask dateStr={resolvedParams.date} />
           </div>
 
           {/* Notes */}
           <div className="rounded-2xl bg-card border p-3">
-            <div className="flex items-center gap-1.5 mb-2">
-              <StickyNote className="h-3.5 w-3.5 text-emerald-500" />
-              <span className="text-xs font-semibold">Ghi chú ({notes?.length ?? 0})</span>
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-1.5">
+                <StickyNote className="h-3.5 w-3.5 text-emerald-500" />
+                <span className="text-xs font-semibold">Ghi chú ({notes?.length ?? 0})</span>
+              </div>
             </div>
             <div className="space-y-1.5">
               {notes && notes.length > 0 ? (
@@ -402,9 +382,11 @@ export default function DayDetailPage({
                   </div>
                 ))
               ) : (
-                <p className="text-xs text-muted-foreground py-3 text-center">Không có ghi chú nào</p>
+                <p className="text-xs text-muted-foreground py-2 text-center">Không có ghi chú nào</p>
               )}
             </div>
+            {/* Quick add note */}
+            <QuickAddNote dateStr={resolvedParams.date} />
           </div>
         </div>
       )}
